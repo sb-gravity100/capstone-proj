@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Announcments</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <div class="menu">
+         <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+               <a href="#" style="cursor: default">Announcments</a>
+            </li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Inquiry</a></li>
+         </ul>
+      </div>
+      <section class="announcements">
+         <div class="background">
+            <div class="overlay"></div>
+         </div>
+         <header>
+            <h2 class="logo"><a href="./index.html">MD-Portal</a></h2>
+            <div class="toggle" onclick="toggleMenu();"></div>
+         </header>
+         <h1 class="title">Announcments</h1>
+         <br />
+         <div class="announce">
+            <div class="grade-levels">
+               <div class="level">Grade 8</div>
+               <div class="level">Grade 9</div>
+               <div class="level">Grade 7</div>
+               <div class="level">Grade 10</div>
+               <div class="level">Grade 11</div>
+               <div class="level">Grade 12</div>
+               <div class="level">TECHVOC</div>
+            </div>
+            <div class="loading"></div>
+            <ul id="announceList"></ul>
+         </div>
+      </section>
+      <script src="./script.js"></script>
+   </body>
+</html>
