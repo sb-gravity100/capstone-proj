@@ -32,7 +32,7 @@ app.use(
    session({
       secret: 'deeznuts',
       store: MongoStore.create({
-         mongoUrl: process.env.MONGO_LOCAL,
+         mongoUrl: process.env.MONGO_URL,
          dbName: 'session-storage',
       }),
       saveUninitialized: false,
@@ -68,7 +68,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => console.log('Database ready!'));
 mongoose
-   .connect(process.env.MONGO_LOCAL, {
+   .connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
    })
