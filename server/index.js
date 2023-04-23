@@ -40,7 +40,8 @@ app.use(
    })
 );
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
-app.use('/', express.static(path.join(__dirname, '../client/build')));
+app.use('/', express.static(path.join(__dirname, '../build')));
+app.use('/static', express.static(path.join(__dirname, '../build/static')));
 console.log(process.env.JWT_SECRET);
 
 /* FILE STORAGE */
@@ -67,7 +68,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => console.log('Database ready!'));
 mongoose
-   .connect(process.env.MONGO_URL, {
+   .connect(process.env.MONGO_LOCAL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
    })
